@@ -31,8 +31,8 @@ def main():
 @app.route('/login')
 def login():
     args = request.args
-    print args['username']
-    print args['password']
+    print(args['username'])
+    print(args['password'])
 
 @app.route('/test_page')
 def test_page():

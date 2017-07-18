@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<img src="static/skyline.jpg" width="100%">
+<form class="navbar-form navbar-left" action="/main">
+    <div class="form-group">
+        <input id="username" type="text" class="form-control" placeholder="Username">
+        <input id="password" type="text" class="form-control" placeholder="Username">
+    </div>
+    <button id="login_btn" type="submit" class="btn btn-default">Login</button>
+</form>
+
+{% endblock %}

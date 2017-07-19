@@ -20,7 +20,10 @@ def connect_db():
 
 @app.route('/')
 def index():
-    page = request.args['page']
+    try:
+        page = request.args['page']
+    except:
+        page = 'login.html'
     return render_template('base.html', page='static/{}'.format(page))
 
 @app.route('/main')

@@ -5,14 +5,42 @@
         <link href="style.css" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <style>
+
+            .banner {
+                max-width: 100%;
+            }
+            .banner-text {
+                position: absolute;
+                color: yellow;
+                text-align: center;
+                width: 100%;
+                font-size: 40;
+                font-weight: bold;
+                letter-spacing: .1em;
+            }
+        </style>
     </head>
     <body>
+        <span class="banner-text">
+            IT'S LIT NYC
+        </span>
+        <img src="skyline.jpg" class="banner" width="100%">
+
         <div class="container">
             <img src="navigate.jpg" width="100%">
 
-            <form action="alert.html">
-                <button class="btn btn-danger btn-block btn-alert">ALERT</button>
-            </form>
         </div>
+        <form action="alert.html">
+            <button class="btn btn-danger btn-block btn-alert">ALERT</button>
+        </form>
+        <script src="lettering-0.6.1.min.js"></script>
+        <script src="circletype.min.js"></script>
+        <script>
+            $('.banner-text').circleType({radius:350});
+            /* circleType sets this to 'relative' */
+            $('.banner-text').css('position', 'absolute');
+        </script>
+
     </body>
 </html>

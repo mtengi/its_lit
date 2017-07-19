@@ -117,43 +117,16 @@
         </style>
     </head>
     <body>
-            <div class="login-page">
-                <div class="form">
-                    <h1>Are your sure?</h1>
-                    <a href="#" id="yes"><button class="button1">Yes</button></a>
-                    <a href="#" id="no"><button class="button2">No</button></a>
-                    <h2 id="download" >Alert was sent.</h2>
-                    <script>
-                        var downloadButton = document.getElementById("download");
-                        var counter = 10;
-                        var newElement = document.createElement("p");
-                        newElement.innerHTML = "Alert will be sent in 10 seconds.";
-                        var id;
-
-                        downloadButton.parentNode.replaceChild(newElement, downloadButton);
-
-                        function send() {
-                            newElement.parentNode.replaceChild(downloadButton, newElement);
-                            clearInterval(id);
-                            window.location.href = 'alert_sent.html';
-                        }
-
-                        id = setInterval(function() {
-                            counter--;
-                            if(counter <= 0) {
-                                send();
-                                } else {
-                                newElement.innerHTML = "Alert will be sent in " + counter.toString() + " seconds.";
-                            }
-                        }, 1000);
-
-                        $('#no').click(function() {
-                            window.history.back();
-                        });
-                        $('#yes').click(send);
-                    </script>
-                </div>
+        <div class="login-page">
+            <div class="form">
+                <h2>Alert was sent.</h2>
+                <h4>Closest location for link NYC:</h4>
+                <h3>Jerome Ave and 181 St</h3>
+                <img src="link.jpg" width="100%">
+                <h2><a href="main.html" class="button1">Back to Home Page</a></h2>
+            </div>
         </div>
+
     </body>
 </html>
 

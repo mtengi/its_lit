@@ -20,12 +20,15 @@ def connect_db():
 
 @app.route('/')
 def index():
-    return render_template('login.html')
+    return render_template('base.html')
 
 @app.route('/main')
 def main():
     return render_template('main.html')
 
+@app.route('/login_page')
+def login_page():
+    return render_template('login.html')
 
 
 @app.route('/login')
@@ -39,4 +42,5 @@ def test_page():
     return render_template('current_page.html')
 
 # start the app
-app.run()
+if __name__ == '__main__':
+    app.run()

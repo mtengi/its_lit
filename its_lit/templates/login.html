@@ -123,11 +123,9 @@ letter-spacing: .1em;
 <script src="static/lettering-0.6.1.min.js"></script>
 <script src="static/circletype.min.js"></script>
 <script>
-    $().ready(function() {
-        $('.banner-text').circleType({radius:350});
-        /* circleType sets this to 'relative' */
-        $('.banner-text').css('position', 'absolute');
-    });
+    $('.banner-text').circleType({radius:350});
+    /* circleType sets this to 'relative' */
+    $('.banner-text').css('position', 'absolute');
 </script>
 
 {% endblock %}

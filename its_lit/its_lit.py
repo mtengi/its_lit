@@ -20,7 +20,8 @@ def connect_db():
 
 @app.route('/')
 def index():
-    return render_template('base.html')
+    page = request.args['page']
+    return render_template('base.html', page='static/{}'.format(page))
 
 @app.route('/main')
 def main():
@@ -30,16 +31,6 @@ def main():
 def login_page():
     return render_template('login.html')
 
-
-@app.route('/login')
-def login():
-    args = request.args
-    print(args['username'])
-    print(args['password'])
-
-@app.route('/test_page')
-def test_page():
-    return render_template('current_page.html')
 
 # start the app
 if __name__ == '__main__':

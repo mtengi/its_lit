@@ -1,0 +1,10 @@
+body {
+    margin: 0px;
+    font-family: 'Special Elite', cursive;
+}
+
+.btn-alert {
+    position: fixed;
+    bottom: 0px;
+    height: 4em;
+}
